@@ -1,0 +1,134 @@
+openapi: 1.0.0
+info:
+  title: Meme Stream Api
+  description: <p> This is the api interface to connect to meme stream and get the proper services and functionality working </p>
+  version: 0.0.1
+servers:
+- url: http://api.hugo-klepsch.tech/v1
+  description: We have a virtual server with Linode running Ubuntu server 16.04 LTS. It has 2 GB of ram and 1 virtual core. There are no limitations to CPU time before additional expenses. It has 25GB of free storage.
+    paths:
+      /users/{keyword}:
+        get:
+          summary: Returns a list of meme streams
+          parameters:
+          - name: keyword
+            in: search terms
+            required: false
+            description: The keywords to search streams against
+            schema:
+              type: string
+          responses:
+            '200':
+              description: returns links to streams
+              content:
+                application/json:
+                  schema:
+                    type: object
+                    properties:
+                      id:
+                        type: string
+                        example: funny
+                      name:
+                        type: string
+                        example: Jessica Smith
+            '400':
+              description: Request failed
+            default:
+              description: Unexpected error
+      /user:
+        post:
+          summary: Creates a new user.
+          requestBody:
+            required: true
+            content:
+              application/json:
+                schema:
+                  $ref: '#/components/schemas/User'
+          responses:
+            '201':
+              description: Created
+            '400':
+              description: Creation Failed
+      /meme/upsert:
+        post:
+          summary: Edits or creates a new meme if one doesnt exist based on id
+          responses:
+            '201':
+              requestBody:
+                required: true
+                content:
+                  application/json:
+                    schema:
+                      type: object
+                      properties:
+                        id:
+                          type: integer
+                          example: 1234
+                        title:
+                          type: String
+                          example: press F to pay respects
+                        tags:
+                          type: String
+                          example: funny, dark
+                        image:
+                          type: image
+                          example: test.png
+      /meme/upsert/{memeId}:
+        post:
+          summary: Edits or creates a new meme if one doesnt exist based on id
+            responses:
+              '200':
+                requestBody:
+                  required: true
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        properties:
+                          id:
+                            type: integer
+                            example: 1234
+                          title:
+                            type: String
+                            example: press F to pay respects
+                          tags:
+                            type: String
+                            example: funny, dark
+                          image:
+                            type: image
+                            example: test.png
+      /meme/{memeId}:
+        delete:
+          summary: Deletes selected meme
+            response:
+              '200':
+                description: Created
+              '400':
+                description: No matching Id
+
+      /user/login/{userId}:
+        post:
+          summary: Sends a request to login
+            responses:
+              '200':
+                description: Logs in the user
+                requestBody:
+                  required: true
+                  content:
+                    application/json:
+                      schema:
+                        type: object
+                        properties:
+                          pwd:
+                            type: string
+                            example: password
+            '400':
+              description: Failed login
+      /update/{userId}:
+        post:
+          summary: Sends a request to scrap the new memes for the stream
+            response:
+              '200':
+                description: returns a list of updated memes to update the stream
+              '400':
+                description: retrieval failed

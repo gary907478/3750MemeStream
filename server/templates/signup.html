@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- bootstrap's css and js -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="static/css/styles_signup.css">
+
+    <title>MemeStream</title>
+</head>
+
+<body>
+    <div class="text-center logo">
+        <img src="static/img/logo.png">
+    </div>
+
+    <!-- video background -->
+    <!-- <video autoplay muted loop id="videobackground">
+        <source src="img/memev.mp4" type="video/mp4">
+    </video> -->
+
+    <div class="modal-dialog text-center">
+        <div class="col-sm-9 main-section">
+            <div class="modal-content">
+                <div class="col-12 user-img">
+                    <img src="static/img/face.png">
+                </div>
+
+                <div class="col-12 form-input">
+                    <form id="signup form" action="/signup" method="post">
+                        <div class="form-group">
+                            <input id="username" type="text" name="username" class="form-control" placeholder="Username">
+                        </div>
+                        <div class="form-group">
+                            <input id="password" type="password" name="password" class="form-control" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <input id="confirm_password" type="password" class="form-control" placeholder="Confirm Password">
+                        </div>
+                        <div class="form-group">
+                            <input id="email" type="email" name="email" class="form-control" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <input id="confirm_email" type="email" class="form-control" placeholder="Confirm Email">
+                        </div>
+                        <div class="col-12 center termcheck">
+                            <p>By signing up, you agree to our Terms & Privacy Policy.</p>
+                        </div>
+                        <button type="submit" class="pure-button btn btn-primary" onclick="signup();">Sign up</button>
+                    </form>
+                    <div class="col-12 center login">
+                        <a href="main.html">Login</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="static/js/signup.js"></script>
+
+</html>

@@ -1,0 +1,37 @@
+.icons {
+    height: 35px;
+    width: 35px;
+}
+
+.icons_search {
+    height: 30px;
+    width: 30px;
+}
+
+.categories_title {
+    font-size: 25px;
+    font-family: arial black;
+}
+
+.categories_box {
+    margin: 5px;
+}
+
+.navbar-brand {
+    font-size: 23px;
+    font-family: arial black;
+    color: #da6314;
+}
+
+.navbar {
+    background-color: lightblue;
+}
+
+.img_holder {
+    height: 60%;
+    width: 60%;
+}
+
+.rightcol {
+    margin-top: 50px;
+}

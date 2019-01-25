@@ -1,0 +1,58 @@
+.icons {
+    height: 35px;
+    width: 35px;
+}
+
+.icons_search {
+    height: 30px;
+    width: 30px;
+}
+
+.categories_title {
+    font-size: 25px;
+    font-family: arial black;
+}
+
+.categories_box {
+    margin: 5px;
+}
+
+.navbar-brand {
+    font-size: 23px;
+    font-family: arial black;
+    color: #da6314;
+}
+
+.navbar {
+    background-color: lightblue;
+}
+
+.img_holder {
+    height: 90%;
+    width: 90%;
+}
+
+.row {
+    display: -ms-flexbox; /* IE 10 */
+    display: flex;
+    -ms-flex-wrap: wrap; /* IE 10 */
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create two equal columns that sits next to each other */
+.column {
+    -ms-flex: 25%; /* IE 10 */
+    flex: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.column video {
+    margin-top: 8px;
+    vertical-align: middle;
+}

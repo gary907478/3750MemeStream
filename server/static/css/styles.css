@@ -1,0 +1,82 @@
+body {
+    background-image: url("../img/wp1.jpg");
+    background-size: cover;
+    /* background-color: #cccccc; */
+}
+
+
+/* #videobackground {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    opacity: 1;
+} */
+
+.logo {
+    margin-top: 20px;
+    margin-bottom: -20px;
+    margin-left: 40%;
+    z-index: 5;
+}
+
+.modal-dialog {
+    margin-left: 50%;
+}
+
+.main-section {
+    margin: 0 auto;
+    margin-top: 130px;
+    padding: 0;
+}
+
+.modal-content {
+    background-color: #434e5a;
+    padding: 0 20px;
+    border-radius: 10px;
+    opacity: .9;
+}
+
+.user-img img {
+    height: 120px;
+    width: 120px;
+}
+
+.user-img {
+    margin-top: -60px;
+    margin-bottom: 45px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group input {
+    height: 45px;
+    letter-spacing: 1px;
+}
+
+.form-input button {
+    width: 100px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.btn-success:hover {
+    background-color: #13445e;
+}
+
+.signup {
+    margin-top: 5px;
+    margin-bottom: 8px;
+    margin-left: -4px;
+}
+
+.signup a {
+    color: #daf1ff;
+}
+
+.forgot a {
+    color: #daf1ff;
+}

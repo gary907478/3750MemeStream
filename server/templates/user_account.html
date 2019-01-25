@@ -1,0 +1,20 @@
+{% extends 'Navbar.html' %}
+{% block container %}
+    <h1>WARNING. THE FOLLOWING MEMES WERE PULLED STRAIGHT FROM 9GAG.COM SERVERS. NONE OF THIS IS OURS.</h1>
+    <br>
+    <h1>FEEL FREE TO CONTACT THE FBI at <a href="https://www.fbi.gov/tips">https://www.fbi.gov/tips</a></h1>
+    <div class="container row">
+        {% for link, isVideo in memes %}
+        <div class="column">
+            {% if isVideo %}
+             <video controls>
+                 <source src="{{ link }}" type="video/mp4">
+                 Your browser does not support the video tag.
+             </video>
+            {% else %}
+            <img class="img_holder" src="{{ link }}" alt="">
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}
